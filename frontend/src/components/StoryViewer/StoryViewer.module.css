@@ -1,0 +1,166 @@
+/* StoryViewer.module.css */
+.storyViewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1;
+}
+
+.storyContent {
+    position: relative;
+    width: 75%;
+    max-width: 350px;
+    height: 620px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    z-index:1;
+}
+
+.gradientOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.2) 25%,
+        rgba(0, 0, 0, 0.2) 75%,
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+.topActions {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px;
+}
+
+.bottomActions {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px;
+}
+.bottomActions img,.topActions img{
+    cursor: pointer;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.previous,
+.next {
+    font-size: 24px;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.slideContent {
+    text-align: start; /* Align text to center */
+    margin-bottom: 30px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 14%;
+    right: -20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin:0;
+}
+
+.progressBar {
+    width: 90%;
+    height: 6px; /* Adjust the height as needed */
+    background-color: #D9D9D980; /* Background color of the progress bar */
+    border: 1px solid black;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    border-radius: 10px;
+
+  }
+  
+  .progressIndicator {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color:#FFFFFF; /* Color of the progress indicator */
+    transition: width 0.5s ease; /* Transition effect for smooth width change */
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .storyContent {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      border-radius: 0;
+      padding: 0;
+    }
+    .previous,
+    .next {
+      display: none;
+    }
+  }
+
+  .progressBar {
+    display: flex;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progressIndicator {
+    height: 100%;
+  }
+  

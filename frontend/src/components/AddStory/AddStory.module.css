@@ -1,0 +1,211 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9999;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%; 
+  max-width: 600px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  height: 500px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+.hiddenSlide {
+  display: none;
+}
+
+.activeSlide {
+  display: block;
+  border: 2px solid #73abff;
+}
+.inputbox,
+.description,
+.inputbox,
+.select {
+  margin-bottom: 10px;
+}
+.cancelSlide {
+  border: 0.5px solid red;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  cursor: pointer;
+  color: red;
+  font-size: 10px;
+  border: 2px solid red;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation div {
+  display: flex;
+  gap: 15px;
+}
+.slidesNumbers {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.slide {
+  height: 65px;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 15px 0px #0000001a;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+}
+
+.previous {
+  background: #7eff73;
+}
+
+.next {
+  background: #73abff;
+}
+.post {
+  background: #ff7373;
+}
+
+.post,
+.next,
+.previous {
+  color: #fff;
+  font-size: 16px;
+}
+
+.inputbox {
+  height: 38px;
+  width: 240px;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+}
+.description {
+  height: 90px;
+  width: 240px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+input::placeholder {
+  font-weight: 700;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 10px;
+  /* border: 1px solid; */
+  width: 80%;
+}
+
+.slideContent div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .modalContent {
+    width: 85%; 
+    flex-direction: row;
+    max-width: none; 
+    height: auto; 
+    padding: 10px; 
+    gap: 10px;
+    max-height: 400px;
+  }
+
+  .slidesNumbers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideContent {
+    width: 90%; 
+    margin-left: 0;
+  }
+
+  .inputbox {
+    height: 32px;
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .description {
+    height: 70px;
+    width: 100%;
+    outline: none;
+    padding: 8px;
+    font-size: 12px;
+  }
+  .next,
+  .previous {
+    display: none;
+  }
+  .post {
+    font-size: 16px;
+    height: auto;
+    width: auto;
+  }
+  .slideinputs {
+    height: auto;
+    width: 300px;
+  }
+  .navigation {
+    justify-content: center;
+  }
+
+  .slideContent div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+}

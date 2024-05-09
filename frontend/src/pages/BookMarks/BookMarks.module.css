@@ -1,0 +1,44 @@
+.storyBoard {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.storiesContainer {
+  height: 5vh;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  width: 95vw;
+  margin: 20px auto;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 90wh;
+  display: flex;
+}
+
+.noBookmarks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 150px;
+}
+.noBookmarks p {
+  font-size: 25px;
+  font-weight: 600px;
+  color: #ff7373;
+}
+.noBookmarks button {
+  background: #ff7373;
+  color: #fff;
+}
