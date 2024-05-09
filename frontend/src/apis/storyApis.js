@@ -1,6 +1,6 @@
 import axios from 'axios';
-// const backendUrl = "https://goodchai0-www-amitkewot-gmail-com-fjjp.onrender.com";
-const backendUrl = "http://localhost:4000";
+const backendUrl = "https://www-amitkewot-gmail-com-cuvette-final-5kvh.onrender.com";
+// const backendUrl = "http://localhost:4000";
 
 // Function to create a new story
 export const makeStory = async (slides) => {

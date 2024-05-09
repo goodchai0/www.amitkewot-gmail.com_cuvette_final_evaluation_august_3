@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
-const backendUrl = "https://goodchai0-www-amitkewot-gmail-com-fjjp.onrender.com";
+const backendUrl = "https://www-amitkewot-gmail-com-cuvette-final-5kvh.onrender.com";
 
 const AuthContext = createContext();
 
